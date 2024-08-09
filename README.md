@@ -6,7 +6,7 @@ A simple tool to cut out a part of gcode - mainly to finish a 3dprint that got i
 
 I could not find this functionality in `RepetierHost` or `PrusaSlicer` so I had to make this
 so that I don't have to re-print a whole print where my filament jammed when about three quarters done :'(
-(I did originally use the `PrusaSlicer` functionality to create the gcode but I used connectors etc, so I can't re-create the same gcode, so I needed to modify the gcode that I have already).
+(I did originally use the `PrusaSlicer` cut functionality to create the gcode but I used connectors etc, so I can't re-create the same gcode, so I needed to modify the gcode that I have already).
 
 ## Install
 
