@@ -67,5 +67,5 @@ first_layer_height = parse(Float64, ARGS[2])
 last_layer_height = parse(Float64, ARGS[3])
 output_file = ARGS[4]
 
-# Example usage: julia modify_gcode.jl input.gcode 0.2 2.0 output.gcode
+# Example usage: julia gcode_cutter.jl input.gcode 0.2 2.0 output.gcode
 modify_gcode(input_file, first_layer_height, last_layer_height, output_file)
