@@ -17,4 +17,4 @@ Download [the script](https://github.com/amanica/gcode_cutter/raw/main/gcode_cut
 ## Usage
 
 Say your print failed at 20mm but you want to keep the original first layer (eg. start cutting out from 0.6mm onward) then you can use:
-`julia gcode_cutter.jl input.gcode 0.6 20.0 output.gcode`
+`julia gcode_cutter.jl input.gcode 0.6 20.0`

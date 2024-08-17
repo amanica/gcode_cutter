@@ -1,3 +1,4 @@
+
 function modify_gcode(input_file::AbstractString, first_layer::Float64, last_layer::Float64, output_file::AbstractString)
     # Read the input G-code file
     input_lines = readlines(input_file)
@@ -65,7 +66,7 @@ end
 input_file = ARGS[1]
 first_layer_height = parse(Float64, ARGS[2])
 last_layer_height = parse(Float64, ARGS[3])
-output_file = ARGS[4]
+output_file = "cut_$(first_layer_height)_$(last_layer_height)_$input_file"
 
-# Example usage: julia gcode_cutter.jl input.gcode 0.2 2.0 output.gcode
+# Example usage: julia gcode_cutter.jl input.gcode 0.2 2.0
 modify_gcode(input_file, first_layer_height, last_layer_height, output_file)
