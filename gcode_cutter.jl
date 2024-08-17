@@ -1,3 +1,4 @@
+#! /usr/bin/env julia
 
 function modify_gcode(input_file::AbstractString, first_layer::Float64, last_layer::Float64, output_file::AbstractString)
     # Read the input G-code file
@@ -66,7 +67,10 @@ end
 input_file = ARGS[1]
 first_layer_height = parse(Float64, ARGS[2])
 last_layer_height = parse(Float64, ARGS[3])
-output_file = "cut_$(first_layer_height)_$(last_layer_height)_$input_file"
+base_name, extension = splitext(input_file)
+output_file = "$(base_name)_cut_$(first_layer_height)_$(last_layer_height)$extension"
 
 # Example usage: julia gcode_cutter.jl input.gcode 0.2 2.0
 modify_gcode(input_file, first_layer_height, last_layer_height, output_file)
+
+println("Done: $output_file")
